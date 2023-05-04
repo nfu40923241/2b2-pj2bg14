@@ -31,39 +31,39 @@
 <p><span>之前在使用coppeliasim執行sciTE程式時，一直無法順利運行，原因是需要先用pip執行pyzmq，cbor，和keyboard這三個東西，執行完後coppeliasim就能正常使用了</span></p>
 <h1>Brython</h1>
 <p><span>亂數排列各小組倉儲及網站</span></p>
-<p><span></span></p>
+<p></p>
 <p><button id="add1to100">1 add to 100</button></p>
 <!-- 導入 brython 程式庫 -->
 <p>
-<script src="/cmsimde/static/brython.js"></script>
-<script src="/cmsimde/static/brython_stdlib.js"></script>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
 </p>
 <!-- 啟動 Brython -->
 <p>
 <script>
 window.onload=function(){
-brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
 </script>
 </p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
-<script src="/cmsimde/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/cmsimde/static/ace/filereader.js" type="text/javascript"></script>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
 </p>
 <p><!-- 導入 ace --></p>
 <p>
-<script src="/cmsimde/static/ace/ace.js" type="text/javascript"></script>
-<script src="/cmsimde/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/cmsimde/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/cmsimde/static/ace/snippets/python.js" type="text/javascript"></script>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
 </p>
 <p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="/cmsimde/static/Cango-24v03-min.js"></script>
-<script src="/cmsimde/static/gearUtils-09.js"></script>
-<script src="/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
-<script src="/cmsimde/static/sylvester.js"></script>
-<script src="/cmsimde/static/PrairieDraw.js"></script>
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+<script src="/static/sylvester.js"></script>
+<script src="/static/PrairieDraw.js"></script>
 </p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
@@ -90,7 +90,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://raw.githubusercontent.com/mdecd2023/2b2-pj2bg14/main/downloads/brythonnn.py"
+        url = "https://raw.githubusercontent.com/mdecd2023/2b2-pj2bg1/main/downloads/w10.py"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -125,7 +125,7 @@ def clear_bd1(ev):
 # 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
 Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
 
-add1to100_url = "https://raw.githubusercontent.com/mdecd2023/2b2-pj2bg14/main/downloads/brythonnn.py"
+add1to100_url = "https://raw.githubusercontent.com/mdecd2023/2b2-pj2bg1/main/downloads/w10.py"
 
 # 從 gist 取得程式碼
 add_src = open(add1to100_url).read()
@@ -162,4 +162,3 @@ doc["add1to100"].bind('click', add)
 <li></li>
 </ol>
 </div>
-<p><span></span></p>
